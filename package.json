@@ -1,0 +1,45 @@
+{
+  "name": "js-tdd-spotify-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "test/**/*.spec.js"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pblobp/js-tdd-spotify-api.git"
+  },
+  "keywords": [],
+  "author": "Pablo Boff Pigozzo <pblobp@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pblobp/js-tdd-spotify-api/issues"
+  },
+  "homepage": "https://github.com/pblobp/js-tdd-spotify-api#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "node-fetch": "^1.7.3",
+    "nyc": "^11.3.0",
+    "sinon": "^4.1.2",
+    "sinon-chai": "^2.14.0",
+    "sinon-stub-promise": "^4.0.0"
+  }
+}
